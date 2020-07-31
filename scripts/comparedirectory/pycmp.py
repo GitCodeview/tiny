@@ -99,6 +99,9 @@ class DirectoryComparison():
             if needIgnore:
                 continue
             for name in files:
+                if name.endswith(".pyc") or name.endswith(".class"):
+                    continue
+                
                 location = os.path.join(path, name)
         
                 # # Get size and add to list of tuples.
@@ -115,8 +118,8 @@ if __name__ == '__main__':
     # directoryIgnore = [r'\out']
     # directoryComparison = DirectoryComparison(r"E:\github\tinyscripts\python3\comparedirectory\a", r"E:\github\tinyscripts\python3\comparedirectory\b", directoryIgnore)
     directoryIgnore = [r'\out']
-    directoryExtra = r'D:\workspace\chromium-stl\src-extra'
-    directoryComparison = DirectoryComparison(r"E:\chromium-stl\src", r"D:\workspace\chromium-stl\src", directoryIgnore, directoryExtra)
+    directoryExtra = r'E:\gitlab\chromium-stl\src-extra'
+    directoryComparison = DirectoryComparison(r"E:\chromium-desktop\chromium-stl\src", r"E:\gitlab\chromium-stl\src", directoryIgnore, directoryExtra)
     # directoryIgnore = []
     # directoryComparison = DirectoryComparison(r"E:\depot_tools", r"D:\workspace\depot_tools", directoryIgnore)
     directoryComparison.printDirecotryDifferences()

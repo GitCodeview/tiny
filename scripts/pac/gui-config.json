@@ -1,0 +1,125 @@
+{
+  "version": "4.1.8.0",
+  "configs": [
+    {
+      "server": "94.176.237.206",
+      "server_port": 21647,
+      "password": "iosDevPwd123",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "",
+      "timeout": 5
+    },
+    {
+      "server": "47.74.226.204",
+      "server_port": 8383,
+      "password": "xx123456",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "新加坡",
+      "timeout": 5
+    },
+    {
+      "server": "47.245.55.21",
+      "server_port": 8383,
+      "password": "xx123456",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "日本",
+      "timeout": 5
+    },
+    {
+      "server": "47.56.125.154",
+      "server_port": 8383,
+      "password": "xx123456",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "香港",
+      "timeout": 5
+    },
+    {
+      "server": "47.74.84.133",
+      "server_port": 8383,
+      "password": "xx123456",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "澳大利亚",
+      "timeout": 5
+    },
+    {
+      "server": "47.254.27.235",
+      "server_port": 8383,
+      "password": "xx123456",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "美国硅谷",
+      "timeout": 5
+    },
+    {
+      "server": "8.208.76.156",
+      "server_port": 8383,
+      "password": "xx123456",
+      "method": "rc4-md5",
+      "plugin": "",
+      "plugin_opts": "",
+      "plugin_args": "",
+      "remarks": "英国伦敦",
+      "timeout": 5
+    }
+  ],
+  "strategy": null,
+  "index": 6,
+  "global": false,
+  "enabled": true,
+  "shareOverLan": false,
+  "isDefault": false,
+  "isIPv6Enabled": false,
+  "localPort": 1080,
+  "portableMode": false,
+  "pacUrl": null,
+  "useOnlinePac": false,
+  "secureLocalPac": false,
+  "availabilityStatistics": false,
+  "autoCheckUpdate": false,
+  "checkPreRelease": false,
+  "isVerboseLogging": true,
+  "logViewer": {
+    "topMost": false,
+    "wrapText": false,
+    "toolbarShown": true,
+    "Font": "Consolas, 8pt",
+    "BackgroundColor": "Black",
+    "TextColor": "White"
+  },
+  "proxy": {
+    "useProxy": false,
+    "proxyType": 0,
+    "proxyServer": "",
+    "proxyPort": 0,
+    "proxyTimeout": 3,
+    "useAuth": false,
+    "authUser": "",
+    "authPwd": ""
+  },
+  "hotkey": {
+    "SwitchSystemProxy": "",
+    "SwitchSystemProxyMode": "",
+    "SwitchAllowLan": "",
+    "ShowLogs": "Shift+F7",
+    "ServerMoveUp": "",
+    "ServerMoveDown": "",
+    "RegHotkeysAtStartup": false
+  }
+}
