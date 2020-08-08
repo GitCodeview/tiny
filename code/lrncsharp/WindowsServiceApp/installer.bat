@@ -1,0 +1,2 @@
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe -u E:\github\tiny\code\lrncsharp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe E:\github\tiny\code\lrncsharp\WindowsServiceApp\bin\Debug\WindowsServiceApp.exe
