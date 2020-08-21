@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace consoleApp
 {
@@ -21,6 +22,26 @@ namespace consoleApp
         public string AllCaps()
         {
             return ToString().ToUpper();
+        }
+    }
+
+
+
+    public class Example
+    {
+
+        public void StartTimer(int dueTime)
+        {
+            Timer t = new Timer(new TimerCallback(TimerProc));
+            t.Change(dueTime, 0);
+        }
+
+        private void TimerProc(object state)
+        {
+            // The state object is the Timer object.
+            Timer t = (Timer)state;
+            t.Dispose();
+            Console.WriteLine("The timer callback executes.");
         }
     }
 
@@ -57,7 +78,7 @@ namespace consoleApp
 
             //HttpClient.DownloadFile(file_url, file_name);
 
-            AESTest.MainTest();
+            //AESTest.MainTest();
 
             // BID Generation and Encryption
             //string newBID = GUIDTest.GenerateBID();
@@ -67,6 +88,34 @@ namespace consoleApp
 
             //Configuration config = Configuration.Load();
             //Configuration.Save(config);
+
+            //RunTimer.MainTest();
+
+            // Create an instance of the Example class, and start two
+            // timers.
+            //Example ex = new Example();
+            //ex.StartTimer(2000);
+            //ex.StartTimer(1000);
+
+            //Console.WriteLine("Press Enter to end the program.");
+            //Console.ReadLine();
+            //获取当前想要启动的进程名，进程名不要加后缀： exe
+            //string strProcessName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+            //int ntmp0 = System.Diagnostics.Process.GetProcessesByName(strProcessName).Length;
+            //int ntmp1 = System.Diagnostics.Process.GetProcessesByName("iChoice").Length;
+            //int ntmp2 = System.Diagnostics.Process.GetProcessesByName("ichoice").Length;
+            //Console.WriteLine($"{ntmp0} {ntmp1} {ntmp2}");
+            //while (true) 
+            //{
+            //    int test_port = Convert.ToInt32(Console.ReadLine());
+            //    if (PortCheck.PortInUse(test_port))
+            //        Console.WriteLine($"{test_port} in using.");
+            //    else
+            //        Console.WriteLine($"{test_port} NOT in using.");
+            //}
+
+            Console.WriteLine("Environment.SpecialFolder.LocalApplicationData: {0}",
+                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
 
         }
     }
