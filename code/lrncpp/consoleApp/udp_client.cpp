@@ -57,7 +57,7 @@ void UDPClient::Run()
 
         printf("Please input data: \n");
         gets_s(sendBuf);
-        sendto(sockSrv, sendBuf, strlen(sendBuf) + 1, 0, (SOCKADDR*)&addrSrv, len);
+        sendto(sockSrv, sendBuf, strlen(sendBuf), 0, (SOCKADDR*)&addrSrv, len);
         //等待并数据
         recvfrom(sockSrv, recvBuf, 100, 0, (SOCKADDR*)&addrSrv, &len);
         if ('\0' == recvBuf[0]) {
