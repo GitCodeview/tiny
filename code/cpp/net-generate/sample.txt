@@ -1,0 +1,243 @@
+wget.exe -r -A.jpg http://content1.erosberry.com/met-art.com/10971/03.jpg
+wget.exe -r -A.jpg http://content1.erosberry.com/femjoy.com/5913/00.jpg
+
+pictures:
+met-art.com
+http://content1.erosberry.com/met-art.com/16676/00.jpg
+http://www.erosberry.com/jeff-milton-gravica-by-met-art-01.html
+
+http://www.erosberry.com/jeff-milton-life-is-good-00.html
+
+zishy.com
+http://content6.erosberry.com/zishy.com/0308/09.jpg
+
+sexart.com
+http://content1.erosberry.com/sexart.com/2804/06.jpg
+
+femjoy.com
+http://content6.erosberry.com/femjoy.com/5913/00.jpg
+
+videos:
+sexart.com
+http://content1.erosberry.com/videos/sexart.com/0007/movie.mp4
+
+met-art.com
+http://content6.erosberry.com/videos/met-art.com/00097/movie.mp4
+http://fhg.met-art.com/mtsets/1D60DCCAF97FDC54CD23AE57E1C47977/MA_20160703_Undress-Code_01_Jeff-Milton_1280x720_02min_07sec.mp4
+
+http://content6.erosberry.com/videos/nubilefilms.com/0122/movie.mp4
+
+n-timate.com
+http://content1.erosberry.com/videos/n-timate.com/00003/movie.mp4
+
+passion-hd.com
+http://content6.erosberry.com/videos/passion-hd.com/00174/movie.mp4
+
+karupspc.com
+http://content1.erosberry.com/videos/karupspc.com/0001/movie.mp4
+
+https://images2.alphacoders.com/486/486636.jpg
+
+nubilefilms.com
+http://content6.erosberry.com/videos/nubilefilms.com/0021/movie.mp4
+http://images.nubiles-porn.com/videos/sticky_sweet/videos/nubilesporn_sticky_sweet_long_640.mp4
+
+http://content6.erosberry.com/videos/sexart.com/0171/movie.mp4
+
+
+netGenerate.exe http://content1.erosberry.com/met-art.com/ .jpg 17660 10000 5  1 20 2
+
+netGenerate.exe -ln 1 -hw sexart.com -ft mp4 -ufn 8 1 4  >sexart.comV.txt
+
+netGenerate.exe -ln 1 -ht http://content6.erosberry.com -hw sexart.com -ft mp4 -ufn 98 1 4  >v.sexart.com.txt
+
+netGenerate.exe -ln 1 -ht http://content6.erosberry.com -hw sexart.com -ft mp4 -ufn 98 200 4  >v2.sexart.com.txt
+
+netGenerate.exe -ln 1 -ht http://content6.erosberry.com -hw sexart.com -ft mp4 -ufn 226 201 4  >v2.sexart.com.txt
+
+
+netGenerate.exe -ln 1 -ht http://content6.erosberry.com -hw sexart.com -ft mp4 -ufn 200 1 4  >v.sexart.com.txt
+
+
+netGenerate.exe -ln 1 -ht http://content6.erosberry.com -hw nubilefilms.com -ft mp4 -ufn 97 1 4  >v.nubilefilms.com.txt
+
+netGenerate.exe -ln 1 -ht http://content6.erosberry.com -hw nubilefilms.com -ft mp4 -ufn 97 200 4  >v.nubilefilms.com.txt
+
+
+
+
+
+netGenerate.exe -hw met-art.com -ft jpg -ufn 17660 10000 5  -ifn 0 20 2 >met-art.com.txt
+
+netGenerate.exe -hw sexart.com -ft jpg -ufn 2906 1 4  -ifn 0 20 2 >sexart.com.txt
+
+netGenerate.exe -hw zishy.com -ft jpg -ufn 308 1 4  -ifn 0 20 2 >zishy.com.txt
+
+netGenerate.exe -hw femjoy.com -ft jpg -ufn 9910 1 4  -ifn 1 20 2 >femjoy.com.txt
+
+
+netGenerate.exe -hw met-art.com -ft jpg -ufn 17660 10000 5  -ifn 0 0 2 >met-art.com0.txt
+
+netGenerate.exe -hw sexart.com -ft jpg -ufn 2906 1 4  -ifn 0 0 2 >sexart.com0.txt
+
+netGenerate.exe -hw zishy.com -ft jpg -ufn 308 1 4  -ifn 0 0 2 >zishy.com0.txt
+
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 1910 1065 4  -ifn 1 15 2 >femjoy.com.1.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 2910 2250 4  -ifn 1 15 2 >femjoy.com.2.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 3910 3243 4  -ifn 1 15 2 >femjoy.com.3.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 4910 4217 4  -ifn 1 15 2 >femjoy.com.4.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 5910 5237 4  -ifn 1 15 2 >femjoy.com.5.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 6910 6211 4  -ifn 1 15 2 >femjoy.com.6.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 7910 7184 4  -ifn 1 15 2 >femjoy.com.7.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 8910 8339 4  -ifn 1 15 2 >femjoy.com.8.txt
+netGenerate.exe  -ln 2 -hw femjoy.com -ft jpg -ufn 9910 9214 4  -ifn 1 15 2 >femjoy.com.9.txt
+
+wget.exe -r -A.jpg -i femjoy.com.1.txt
+wget.exe -r -A.jpg -i femjoy.com.2.txt
+wget.exe -r -A.jpg -i femjoy.com.3.txt
+wget.exe -r -A.jpg -i femjoy.com.4.txt
+wget.exe -r -A.jpg -i femjoy.com.5.txt
+wget.exe -r -A.jpg -i femjoy.com.6.txt
+wget.exe -r -A.jpg -i femjoy.com.7.txt
+wget.exe -r -A.jpg -i femjoy.com.8.txt
+wget.exe -r -A.jpg -i femjoy.com.9.txt
+
+
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 11660 11291 5  -ifn 1 15 2 >met-art.com.1.txt
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 12660 12125 5  -ifn 1 15 2 >met-art.com.2.txt
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 13660 13078 5  -ifn 1 15 2 >met-art.com.3.txt
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 14660 14035 5  -ifn 1 15 2 >met-art.com.4.txt
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 15660 15147 5  -ifn 1 15 2 >met-art.com.5.txt
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 16660 16091 5  -ifn 1 15 2 >met-art.com.6.txt
+netGenerate.exe -ln 2 -hw met-art.com -ft jpg -ufn 17660 16964 5  -ifn 1 15 2 >met-art.com.7.txt
+
+wget.exe -r -A.jpg -i met-art.com.1.txt
+wget.exe -r -A.jpg -i met-art.com.2.txt
+wget.exe -r -A.jpg -i met-art.com.3.txt
+wget.exe -r -A.jpg -i met-art.com.4.txt
+wget.exe -r -A.jpg -i met-art.com.5.txt
+wget.exe -r -A.jpg -i met-art.com.6.txt
+wget.exe -r -A.jpg -i met-art.com.7.txt
+
+
+netGenerate.exe -ln 2 -hw sexart.com -ft jpg -ufn 1306 0846 4  -ifn 1 15 2 >sexart.com.1.txt
+netGenerate.exe -ln 2 -hw sexart.com -ft jpg -ufn 2106 1726 4  -ifn 1 15 2 >sexart.com.2.txt
+netGenerate.exe -ln 2 -hw sexart.com -ft jpg -ufn 2906 2412 4  -ifn 1 15 2 >sexart.com.3.txt
+
+wget.exe -r -A.jpg -i sexart.com.1.txt
+wget.exe -r -A.jpg -i sexart.com.2.txt
+wget.exe -r -A.jpg -i sexart.com.3.txt
+
+
+
+
+
+http://img.11rtys.com/201405/8/1.jpg
+
+http://img.11rtys.com/201405/33/1.jpg
+
+http://img.11rtys.com/201309/47/1.jpg
+
+http://img.11rtys.com/201306/30/1.jpg
+
+http://img.11rtys.com/201209/50/1.jpg
+
+http://img.11rtys.com/201006/5/1.jpg
+
+http://img.11rtys.com/200905/86/1.jpg
+
+http://img.11rtys.com/20080701/166/1.jpg
+
+http://img.11rtys.com/20080701/188/1.jpg
+
+http://img.11rtys.com/20080701/309/22.jpg
+
+200808 201405
+
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2014 1 5 -ft jpg -ufn 10 1 4  -ifn 1 20 2 >11rtys.com.2014.txt
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2014 1 5 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2014.txt
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2013 2 12 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2013.txt
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2012 1 12 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2012.txt
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2011 1 12 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2011.txt
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2010 1 12 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2010.txt
+
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2009 1 12 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2009.txt
+netGenerate.exe -ln 3 -ht http://img.11rtys.com -yfn 2008 8 12 -ft jpg -ufn 100 1 4  -ifn 1 20 2 >11rtys.com.2008.txt
+
+wget.exe -r -A.jpg -i 11rtys.com.2014.txt
+wget.exe -r -A.jpg -i 11rtys.com.2014.txt
+wget.exe -r -A.jpg -i 11rtys.com.2013.txt
+wget.exe -r -A.jpg -i 11rtys.com.2012.txt
+wget.exe -r -A.jpg -i 11rtys.com.2011.txt
+wget.exe -r -A.jpg -i 11rtys.com.2010.txt
+wget.exe -r -A.jpg -i 11rtys.com.2009.txt
+wget.exe -r -A.jpg -i 11rtys.com.2008.txt
+
+netGenerate.exe -ln 4 -ht http://img.11rtys.com -hw 20080701 -ft jpg -ufn 309 1 4  -ifn 1 30 2 >11rtys.com.20080701.txt
+
+
+http://content6.erosberry.com/digitaldesire.com/7048/11.jpg
+
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 1 1000 4  -ifn 1 15 2 >digitaldesire.com.1.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 1001 2000 4  -ifn 1 15 2 >digitaldesire.com.2.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 2001 3000 4  -ifn 1 15 2 >digitaldesire.com.3.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 3001 4000 4  -ifn 1 15 2 >digitaldesire.com.4.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 4001 5000 4  -ifn 1 15 2 >digitaldesire.com.5.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 5001 6000 4  -ifn 1 15 2 >digitaldesire.com.6.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 6001 7000 4  -ifn 1 15 2 >digitaldesire.com.7.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 7001 7047 4  -ifn 1 15 2 >digitaldesire.com.8.txt
+netGenerate.exe -ln 2 -hw digitaldesire.com -ft jpg -ufn 7047 7053 4  -ifn 1 15 2 >digitaldesire.com.9.txt
+
+wget.exe -r -A.jpg -i digitaldesire.com.1.txt
+wget.exe -r -A.jpg -i digitaldesire.com.2.txt
+wget.exe -r -A.jpg -i digitaldesire.com.3.txt
+wget.exe -r -A.jpg -i digitaldesire.com.4.txt
+wget.exe -r -A.jpg -i digitaldesire.com.5.txt
+wget.exe -r -A.jpg -i digitaldesire.com.6.txt
+wget.exe -r -A.jpg -i digitaldesire.com.7.txt
+wget.exe -r -A.jpg -i digitaldesire.com.8.txt
+wget.exe -r -A.jpg -i digitaldesire.com.9.txt
+
+http://content8.erosberry.com/x-art.com/3068/03.jpg
+
+
+netGenerate.exe -ln 2 -hw x-art.com -ft jpg -ufn 1 1000 4  -ifn 0 15 2 >x-art.com.1.txt
+netGenerate.exe -ln 2 -hw x-art.com -ft jpg -ufn 1001 2000 4  -ifn 0 15 2 >x-art.com.2.txt
+netGenerate.exe -ln 2 -hw x-art.com -ft jpg -ufn 2001 3000 4  -ifn 0 15 2 >x-art.com.3.txt
+netGenerate.exe -ln 2 -hw x-art.com -ft jpg -ufn 3001 3076 4  -ifn 1 15 2 >x-art.com.4.txt
+
+wget.exe -r -A.jpg -i x-art.com.1.txt
+wget.exe -r -A.jpg -i x-art.com.2.txt
+wget.exe -r -A.jpg -i x-art.com.3.txt
+wget.exe -r -A.jpg -i x-art.com.4.txt
+
+
+http://content4.erosberry.com/watch4beauty.com/5187/00.jpg
+
+netGenerate.exe -ln 2 -hw watch4beauty.com -ft jpg -ufn 1 1000 4  -ifn 1 16 2 >watch4beauty.com.1.txt
+netGenerate.exe -ln 2 -hw watch4beauty.com -ft jpg -ufn 1001 2000 4  -ifn 1 16 2 >watch4beauty.com.2.txt
+netGenerate.exe -ln 2 -hw watch4beauty.com -ft jpg -ufn 2001 3000 4  -ifn 1 16 2 >watch4beauty.com.3.txt
+netGenerate.exe -ln 2 -hw watch4beauty.com -ft jpg -ufn 3001 4000 4  -ifn 1 16 2 >watch4beauty.com.4.txt
+netGenerate.exe -ln 2 -hw watch4beauty.com -ft jpg -ufn 4001 5195 4  -ifn 1 16 2 >watch4beauty.com.5.txt
+netGenerate.exe -ln 2 -hw watch4beauty.com -ft jpg -ufn 001 5195 4  -ifn 0 0 2 >watch4beauty.com.0.txt
+
+wget.exe -r -A.jpg -i watch4beauty.com.0.txt
+wget.exe -r -A.jpg -i watch4beauty.com.1.txt
+wget.exe -r -A.jpg -i watch4beauty.com.2.txt
+wget.exe -r -A.jpg -i watch4beauty.com.3.txt
+wget.exe -r -A.jpg -i watch4beauty.com.4.txt
+wget.exe -r -A.jpg -i watch4beauty.com.5.txt
+
+http://contenta.erosberry.com/eternaldesire.com/1135/00.jpg
+
+netGenerate.exe -ln 2 -hw eternaldesire.com -ft jpg -ufn 1 1000 4  -ifn 0 15 2 >eternaldesire.com.1.txt
+netGenerate.exe -ln 2 -hw eternaldesire.com -ft jpg -ufn 1001 2000 4  -ifn 0 15 2 >eternaldesire.com.2.txt
+
+wget.exe -r -A.jpg -i eternaldesire.com.1.txt
+wget.exe -r -A.jpg -i eternaldesire.com.2.txt

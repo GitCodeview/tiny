@@ -1,0 +1,516 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"EOS.plt"'
+$!VarSet |LFDSVL1| = '"<greek>r</greek>" "Zero" "IdealFluid" "DPDFluid" "MDPDFluid"'
+$!VarSet |LFDSFN2| = '"EOS_DPD.plt"'
+$!VarSet |LFDSVL2| = '"<greek>r</greek>" "Zero" "IdealFluid" "DPDFluid" "MDPDFluid" "P"'
+$!VarSet |LFDSFN3| = '"EOS_MDPD.plt"'
+$!VarSet |LFDSVL3| = '"<greek>r</greek>" "Zero" "IdealFluid" "DPDFluid" "MDPDFluid" "P"'
+$!VarSet |LFDSFN4| = '"EOS_ideal.plt"'
+$!VarSet |LFDSVL4| = '"<greek>r</greek>" "Zero" "IdealFluid" "DPDFluid" "MDPDFluid" "P"'
+$!VarSet |LFDSFN5| = '"EOSmdpdBubble.plt"'
+$!VarSet |LFDSVL5| = '"<greek>r</greek>" "Zero" "IdealFluid" "DPDFluid" "MDPDFluid" "P" "MDPDBubble"'
+$!SETSTYLEBASE FACTORY
+$!PLOTOPTIONS 
+  SUBDIVIDEALLCELLS = NO
+$!GLOBALPAPER 
+  PAPERSIZEINFO
+    {
+    LETTER
+      {
+      WIDTH = 8.5
+      HEIGHT = 11
+      LEFTHARDCLIPOFFSET = 0.125
+      RIGHTHARDCLIPOFFSET = 0.125
+      TOPHARDCLIPOFFSET = 0.125
+      BOTTOMHARDCLIPOFFSET = 0.125
+      }
+    }
+$!PAGE 
+  NAME = 'Untitled'
+  PAPERATTRIBUTES
+    {
+    BACKGROUNDCOLOR = WHITE
+    ISTRANSPARENT = YES
+    ORIENTPORTRAIT = NO
+    SHOWGRID = YES
+    SHOWRULER = NO
+    SHOWPAPER = NO
+    PAPERSIZE = LETTER
+    RULERSPACING = ONEINCH
+    PAPERGRIDSPACING = HALFINCH
+    REGIONINWORKAREA
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!READDATASET  '|LFDSFN1|'
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  ASSIGNSTRANDIDS = YES
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL1|'
+$!REMOVEVAR |LFDSVL1|
+$!REMOVEVAR |LFDSFN1|
+$!READDATASET  '|LFDSFN2|'
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  READDATAOPTION = APPEND
+  RESETSTYLE = NO
+  ASSIGNSTRANDIDS = YES
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL2|'
+$!REMOVEVAR |LFDSVL2|
+$!REMOVEVAR |LFDSFN2|
+$!READDATASET  '|LFDSFN3|'
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  READDATAOPTION = APPEND
+  RESETSTYLE = NO
+  ASSIGNSTRANDIDS = YES
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL3|'
+$!REMOVEVAR |LFDSVL3|
+$!REMOVEVAR |LFDSFN3|
+$!READDATASET  '|LFDSFN4|'
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  READDATAOPTION = APPEND
+  RESETSTYLE = NO
+  ASSIGNSTRANDIDS = YES
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL4|'
+$!REMOVEVAR |LFDSVL4|
+$!REMOVEVAR |LFDSFN4|
+$!READDATASET  '|LFDSFN5|'
+  INITIALPLOTTYPE = XYLINE
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  READDATAOPTION = APPEND
+  RESETSTYLE = NO
+  ASSIGNSTRANDIDS = YES
+  VARLOADMODE = BYNAME
+  VARNAMELIST = '|LFDSVL5|'
+$!REMOVEVAR |LFDSVL5|
+$!REMOVEVAR |LFDSFN5|
+$!FRAMELAYOUT 
+  SHOWBORDER = NO
+  SHOWHEADER = NO
+  HEADERCOLOR = RED
+  XYPOS
+    {
+    X = 1
+    Y = 0.25
+    }
+  WIDTH = 9
+  HEIGHT = 8
+$!THREEDAXIS 
+  ASPECTRATIOLIMIT = 25
+  BOXASPECTRATIOLIMIT = 25
+$!PLOTTYPE  = XYLINE
+$!FRAMENAME  = 'Frame 001'
+$!GLOBALTIME 
+  SOLUTIONTIME = 0
+$!DELETELINEMAPS 
+$!ACTIVELINEMAPS  =  [1-5,7,9-10]
+$!GLOBALLINEPLOT 
+  DATALABELS
+    {
+    DISTANCESKIP = 5
+    }
+  LEGEND
+    {
+    SHOW = YES
+    TEXTSHAPE
+      {
+      FONTFAMILY = 'Times New Roman'
+      }
+    BOX
+      {
+      MARGIN = 5
+      }
+    XYPOS
+      {
+      X = 48.201
+      Y = 87.779
+      }
+    }
+$!LINEMAP  [1]
+  NAME = '&DV&Line'
+  ASSIGN
+    {
+    ZONE = 1
+    XAXISVAR = 1
+    YAXISVAR = 2
+    SHOWINLEGEND = NEVER
+    }
+  LINES
+    {
+    COLOR = BLACK
+    LINEPATTERN = DASHED
+    LINETHICKNESS = 0.2
+    }
+  SYMBOLS
+    {
+    SHOW = NO
+    COLOR = RED
+    FILLCOLOR = RED
+    }
+  BARCHARTS
+    {
+    COLOR = RED
+    FILLCOLOR = RED
+    }
+  ERRORBARS
+    {
+    COLOR = RED
+    }
+$!LINEMAP  [2]
+  NAME = '&DV&'
+  ASSIGN
+    {
+    ZONE = 1
+    XAXISVAR = 1
+    YAXISVAR = 3
+    }
+  LINES
+    {
+    COLOR = BLACK
+    LINEPATTERN = DASHDOT
+    PATTERNLENGTH = 3
+    LINETHICKNESS = 0.3
+    }
+  SYMBOLS
+    {
+    SHOW = NO
+    COLOR = GREEN
+    FILLCOLOR = GREEN
+    }
+  BARCHARTS
+    {
+    COLOR = GREEN
+    FILLCOLOR = GREEN
+    }
+  ERRORBARS
+    {
+    COLOR = GREEN
+    }
+$!LINEMAP  [3]
+  NAME = '&DV&'
+  ASSIGN
+    {
+    ZONE = 1
+    XAXISVAR = 1
+    YAXISVAR = 4
+    }
+  LINES
+    {
+    COLOR = BLACK
+    LINEPATTERN = DASHDOTDOT
+    PATTERNLENGTH = 4
+    LINETHICKNESS = 0.3
+    }
+  SYMBOLS
+    {
+    SHOW = NO
+    COLOR = BLUE
+    FILLCOLOR = BLUE
+    }
+  BARCHARTS
+    {
+    COLOR = BLUE
+    FILLCOLOR = BLUE
+    }
+  ERRORBARS
+    {
+    COLOR = BLUE
+    }
+$!LINEMAP  [4]
+  NAME = '&DV&'
+  ASSIGN
+    {
+    ZONE = 1
+    XAXISVAR = 1
+    YAXISVAR = 5
+    }
+  LINES
+    {
+    COLOR = BLACK
+    LINETHICKNESS = 0.3
+    }
+  SYMBOLS
+    {
+    SHOW = NO
+    COLOR = CUSTOM1
+    FILLCOLOR = CUSTOM1
+    }
+  BARCHARTS
+    {
+    COLOR = CUSTOM1
+    FILLCOLOR = CUSTOM1
+    }
+  ERRORBARS
+    {
+    COLOR = CUSTOM1
+    }
+$!LINEMAP  [5]
+  NAME = '&ZN&'
+  ASSIGN
+    {
+    ZONE = 2
+    XAXISVAR = 1
+    YAXISVAR = 6
+    }
+  LINES
+    {
+    SHOW = NO
+    COLOR = BLACK
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = DEL
+      }
+    COLOR = BLACK
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = BLACK
+    }
+  BARCHARTS
+    {
+    COLOR = CUSTOM3
+    FILLCOLOR = CUSTOM3
+    }
+  ERRORBARS
+    {
+    COLOR = CUSTOM3
+    }
+$!LINEMAP  [6]
+  NAME = '&ZN&'
+  ASSIGN
+    {
+    ZONE = 3
+    XAXISVAR = 1
+    YAXISVAR = 6
+    }
+  LINES
+    {
+    SHOW = NO
+    COLOR = PURPLE
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = DEL
+      }
+    COLOR = BLACK
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = PURPLE
+    }
+  BARCHARTS
+    {
+    COLOR = PURPLE
+    FILLCOLOR = PURPLE
+    }
+  ERRORBARS
+    {
+    COLOR = PURPLE
+    }
+$!LINEMAP  [7]
+  NAME = '&ZN&'
+  ASSIGN
+    {
+    ZONE = 4
+    XAXISVAR = 1
+    YAXISVAR = 6
+    }
+  LINES
+    {
+    SHOW = NO
+    COLOR = RED
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = DIAMOND
+      }
+    COLOR = BLACK
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = RED
+    }
+  BARCHARTS
+    {
+    COLOR = RED
+    FILLCOLOR = RED
+    }
+  ERRORBARS
+    {
+    COLOR = RED
+    }
+$!LINEMAP  [8]
+  NAME = '&ZN&'
+  ASSIGN
+    {
+    ZONE = 5
+    XAXISVAR = 1
+    YAXISVAR = 6
+    }
+  LINES
+    {
+    SHOW = NO
+    COLOR = GREEN
+    }
+  SYMBOLS
+    {
+    COLOR = BLACK
+    FILLCOLOR = GREEN
+    }
+  BARCHARTS
+    {
+    COLOR = GREEN
+    FILLCOLOR = GREEN
+    }
+  ERRORBARS
+    {
+    COLOR = GREEN
+    }
+$!LINEMAP  [9]
+  NAME = '&ZN&'
+  ASSIGN
+    {
+    ZONE = 6
+    XAXISVAR = 1
+    YAXISVAR = 6
+    }
+  LINES
+    {
+    SHOW = NO
+    COLOR = BLUE
+    }
+  SYMBOLS
+    {
+    SYMBOLSHAPE
+      {
+      GEOMSHAPE = CIRCLE
+      }
+    COLOR = BLACK
+    FILLMODE = USELINECOLOR
+    FILLCOLOR = BLUE
+    SIZE = 1
+    }
+  BARCHARTS
+    {
+    COLOR = BLUE
+    FILLCOLOR = BLUE
+    }
+  ERRORBARS
+    {
+    COLOR = BLUE
+    }
+$!LINEMAP  [10]
+  NAME = 'MDPDBubble'
+  ASSIGN
+    {
+    ZONE = 7
+    XAXISVAR = 1
+    YAXISVAR = 7
+    }
+  LINES
+    {
+    COLOR = BLACK
+    LINEPATTERN = DASHDOTDOT
+    LINETHICKNESS = 0.3
+    }
+  SYMBOLS
+    {
+    SHOW = NO
+    COLOR = CUSTOM1
+    FILLCOLOR = CUSTOM1
+    }
+  BARCHARTS
+    {
+    COLOR = CUSTOM1
+    FILLCOLOR = CUSTOM1
+    }
+  ERRORBARS
+    {
+    COLOR = CUSTOM1
+    }
+$!XYLINEAXIS 
+  PRESERVEAXISSCALE = YES
+  DEPXTOYRATIO = 1
+$!XYLINEAXIS 
+  XDETAIL 1
+    {
+    RANGEMIN = 0
+    RANGEMAX = 9
+    AUTOGRID = NO
+    GRSPACING = 1
+    }
+$!XYLINEAXIS 
+  YDETAIL 1
+    {
+    RANGEMIN = -50
+    RANGEMAX = 200
+    GRSPACING = 50
+    TITLE
+      {
+      TITLEMODE = USETEXT
+      TEXT = 'P'
+      }
+    }
+$!LINEPLOTLAYERS 
+  SHOWSYMBOLS = YES
+$!ATTACHTEXT 
+  POSITIONCOORDSYS = GRID
+  ANCHORPOS
+    {
+    X = 6.929289740698979
+    Y = -7.633962429903818
+    }
+  TEXTSHAPE
+    {
+    FONTFAMILY = 'Times New Roman'
+    ISBOLD = NO
+    ISITALIC = YES
+    }
+  TEXT = 'ZeroLine'
+$!ATTACHTEXT 
+  ANCHORPOS
+    {
+    X = 61.02342477765248
+    Y = 15.10710259301016
+    }
+  TEXTSHAPE
+    {
+    FONTFAMILY = 'Times New Roman'
+    ISBOLD = NO
+    }
+  TEXT = '<greek>r</greek> = 5.7'
+$!ATTACHGEOM 
+  ANCHORPOS
+    {
+    X = 5.70268320180383
+    Y = -16.89922253620108
+    }
+  LINEPATTERN = LONGDASH
+  LINETHICKNESS = 0.2
+  ARROWHEADATTACHMENT = ATEND
+  ARROWHEADSIZE = 1
+  RAWDATA
+1
+2
+-2.29849490552E-07 9.14591225865E-07 
+-2.29849490552E-07 -34.7735710144 
+$!FRAMECONTROL ACTIVATEBYNUMBER
+  FRAME = 1
+$!SETSTYLEBASE CONFIG

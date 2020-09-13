@@ -1,0 +1,13 @@
+RDF parameter:
+deltaQ   RDFstepSample
+0.05      5000
+Grid cell length /deltaL for bubblesize
+0.2  1
+Diffusivity parameter:
+intervalStep grossStep
+20           5000
+Barostat:
+JStep BStep Density  JPress riseTime lpercent(<1 and >0)
+20000  1    -6.0     50.0     10.0    0.8
+wave id(1:harmonic/2:jump/0:Nowave) dualfrequency and amplitude
+0 0.1 30
