@@ -4,14 +4,17 @@
 #include <iostream>
 
 #include "udp_client.h"
+#include "regedit_test.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
 
-    UDPClient local_client = UDPClient();
-    if(local_client.InitClient())
-        local_client.Run();
+    //UDPClient local_client = UDPClient();
+    //if(local_client.InitClient())
+    //    local_client.Run();
+
+    RegeditTest::TestMain();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -92,6 +92,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,6 +121,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,6 +144,7 @@
     <ClCompile Include="consoleApp.cpp" />
     <ClCompile Include="multiprocess_client.cpp" />
     <ClCompile Include="multithread_client.cpp" />
+    <ClCompile Include="regedit_test.cpp" />
     <ClCompile Include="sock5_client.cpp" />
     <ClCompile Include="sysproxy_setting.cpp" />
     <ClCompile Include="udp_client.cpp" />
@@ -149,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="multiprocess_client.h" />
     <ClInclude Include="multithread_client.h" />
+    <ClInclude Include="regedit_test.h" />
     <ClInclude Include="sock5_client.h" />
     <ClInclude Include="sysproxy_setting.h" />
     <ClInclude Include="udp_client.h" />

@@ -33,6 +33,9 @@
     <ClCompile Include="sysproxy_setting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="regedit_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="udp_client.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sysproxy_setting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="regedit_test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
