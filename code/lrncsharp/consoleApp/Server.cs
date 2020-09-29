@@ -28,6 +28,7 @@ namespace consoleApp
         public string plugin_args;
         public string remarks;
         public int timeout;
+        public int timeoutProxyCnt;
 
         public override int GetHashCode()
         {

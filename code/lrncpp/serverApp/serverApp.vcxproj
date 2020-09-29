@@ -140,10 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="serverApp.cpp" />
+    <ClCompile Include="tcp_test.cpp" />
     <ClCompile Include="udp_server.cpp" />
+    <ClCompile Include="udp_test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="tcp_test.h" />
     <ClInclude Include="udp_server.h" />
+    <ClInclude Include="udp_test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

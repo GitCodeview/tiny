@@ -4,13 +4,47 @@
 #include <iostream>
 
 #include "udp_server.h"
+#include "udp_test.h"
+
+DWORD WINAPI ThreadRecvfrom(LPVOID lpParamter)
+{
+    std::string receive_msg;
+    Sleep(100);
+    while (receive_msg != ":q")
+    {
+        UDPTest::UDPRecvfromTest(receive_msg);
+        std::cout << " Received Msg: " << receive_msg;
+    }
+
+    return 0L;
+}
+
+DWORD WINAPI ThreadSendto(LPVOID lpParamter)
+{
+    std::string send_msg = "Hello!";
+    Sleep(100);
+    for (int i = 0; i < 10; i++)
+    {
+        UDPTest::UDPSendtoTest(send_msg);
+        std::cout << "[" << i <<"] Sent Msg: " << send_msg ;
+    }
+    UDPTest::UDPSendtoTest(":q");
+    return 0L;
+}
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+    //HANDLE hThreadRecvfrom = CreateThread(NULL, 0, ThreadRecvfrom, NULL, 0, NULL);
+    //HANDLE hThreadSendto = CreateThread(NULL, 0, ThreadSendto, NULL, 0, NULL);
+
     UDPServer local_server = UDPServer();
     if (local_server.InitServer())
         local_server.Run();
+
+    //CloseHandle(hThreadRecvfrom);
+    //CloseHandle(hThreadSendto);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -21,9 +21,33 @@
     <ClCompile Include="udp_client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="multithread_client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multiprocess_client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sock5_client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sysproxy_setting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="udp_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multithread_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multiprocess_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sock5_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sysproxy_setting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

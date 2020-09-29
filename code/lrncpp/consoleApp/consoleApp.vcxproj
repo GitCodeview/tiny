@@ -140,9 +140,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="consoleApp.cpp" />
+    <ClCompile Include="multiprocess_client.cpp" />
+    <ClCompile Include="multithread_client.cpp" />
+    <ClCompile Include="sock5_client.cpp" />
+    <ClCompile Include="sysproxy_setting.cpp" />
     <ClCompile Include="udp_client.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="multiprocess_client.h" />
+    <ClInclude Include="multithread_client.h" />
+    <ClInclude Include="sock5_client.h" />
+    <ClInclude Include="sysproxy_setting.h" />
     <ClInclude Include="udp_client.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

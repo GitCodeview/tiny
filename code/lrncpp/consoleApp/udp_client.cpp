@@ -54,7 +54,6 @@ void UDPClient::Run()
 
     while (1)
     {
-
         printf("Please input data: \n");
         gets_s(sendBuf);
         sendto(sockSrv, sendBuf, strlen(sendBuf), 0, (SOCKADDR*)&addrSrv, len);
@@ -65,7 +64,7 @@ void UDPClient::Run()
             Sleep(100);
             continue;
         }
-            
+
         if ('q' == recvBuf[0])
         {
             sendto(sockSrv, "q", strlen("q") + 1, 0, (SOCKADDR*)&addrSrv, len);
@@ -74,7 +73,6 @@ void UDPClient::Run()
         }
         sprintf_s(tempBuf, "[%s]Server say : %s", inet_ntoa(addrSrv.sin_addr), recvBuf);
         printf("%s\n", tempBuf);
-
         //·¢ËÍÊý¾Ý
     }
     closesocket(sockSrv);

@@ -1,16 +1,27 @@
-#include <stdio.h>
+
+
 #include "udp_server.h"
 
-UDPServer::UDPServer()
-{
+#include <stdio.h>
+#include <iostream>
+
+
+UDPServer::UDPServer() {
+    socket_addr_len = sizeof(SOCKADDR);
+    memset(receive_buff, '\0', MAX_BUFF_SIZE);
+    memset(send_buff, '\0', MAX_BUFF_SIZE);
 }
 
-UDPServer::~UDPServer()
-{
+UDPServer::~UDPServer() {
+    closesocket(server_socket);
+    WSACleanup();
 }
 
-bool UDPServer::InitServer()
-{
+bool UDPServer::InitServer() {
+    WORD wVersionRequested;
+    WSADATA wsaData;
+    int err = 0;
+
     wVersionRequested = MAKEWORD(1, 1);
 
     err = WSAStartup(wVersionRequested, &wsaData); //错误会返回WSASYSNOTREADY
@@ -25,61 +36,61 @@ bool UDPServer::InitServer()
         WSACleanup();
         return false;
     }
-	return true;
+    //创建用于监听的套接字
+    server_socket = socket(AF_INET, SOCK_DGRAM, 0);
+    //失败会返回 INVALID_SOCKET
+    //printf("Failed. Error Code : %d",WSAGetLastError())//显示错误信息
+
+    int timeout = 5000; // timeout millseconds
+    setsockopt(server_socket, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeout, sizeof(timeout));
+
+    //定义server发送和接收数据包的地址
+    server_addr.sin_addr.S_un.S_addr = htonl(INADDR_ANY);
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(11100);
+
+    //绑定套接字, 绑定到端口
+    bind(server_socket, (SOCKADDR*)&server_addr, socket_addr_len);
+    //将套接字设为监听模式， 准备接收客户请求
+    return true;
+}
+
+bool UDPServer::RecvMsg(std::string& receive_msg) {
+    int err =recvfrom(server_socket, receive_buff, MAX_BUFF_SIZE, 0,
+        (SOCKADDR*)&client_addr, &socket_addr_len);
+    if (err == SOCKET_ERROR) {
+        std::cout << "[@LT]" << "(UDPServer) Receive message failed."
+            << "recvfrom failed with error " << WSAGetLastError()<< std::endl;
+
+        if (WSAGetLastError() == WSAETIMEDOUT) {
+            std::cout << "Time out " << WSAGetLastError() << std::endl;
+        }
+        return false;
+    }
+    if ('\0' == receive_buff[0]) {
+        std::cout << "[@LT]"
+            << "Didn't receive the data.";
+        return false;
+    }
+    receive_msg = receive_buff;
+    return true;
+}
+bool UDPServer::SendMsg(const std::string send_msg) {
+    memcpy(send_buff, send_msg.c_str(), send_msg.size());
+    sendto(server_socket, send_buff, strlen(send_buff), 0,
+        (SOCKADDR*)&client_addr, socket_addr_len);
+    return true;
 }
 
 void UDPServer::Run()
 {
     printf("server is operating!\n\n");
-    //创建用于监听的套接字
-    SOCKET sockSrv = socket(AF_INET, SOCK_DGRAM, 0); //失败会返回 INVALID_SOCKET
-    //printf("Failed. Error Code : %d",WSAGetLastError())//显示错误信息
-
-    SOCKADDR_IN addrSrv; //定义sockSrv发送和接收数据包的地址
-    addrSrv.sin_addr.S_un.S_addr = htonl(INADDR_ANY);
-    addrSrv.sin_family = AF_INET;
-    addrSrv.sin_port = htons(11100);
-
-    //绑定套接字, 绑定到端口
-    bind(sockSrv, (SOCKADDR*)&addrSrv, sizeof(SOCKADDR)); //会返回一个SOCKET_ERROR
-    //将套接字设为监听模式， 准备接收客户请求
-
-    SOCKADDR_IN addrClient; //用来接收客户端的地址信息
-    
-    int len = sizeof(SOCKADDR);
-    char recvBuf[100]; //收
-    char sendBuf[100]; //发
-    char tempBuf[100]; //存储中间信息数据
-
-    memset(recvBuf, '\0', 100);
-    memset(sendBuf, '\0', 100);
-    memset(tempBuf, '\0', 100);
-
-    while (1)
+    std::string receive_msg, send_msg = "Received Successfully.";
+    while (true)
     {
-
-        //等待并数据
-        recvfrom(sockSrv, recvBuf, 100, 0, (SOCKADDR*)&addrClient, &len);
-        if ('\0' == recvBuf[0]) {
-            printf(" Didn't receive the data in 100 milliseconds. \n\n");
-            Sleep(100);
-            continue;
+        if (RecvMsg(receive_msg)) {
+            std::cout << "Client Say: "<< receive_msg << std::endl;
+            SendMsg(send_msg);
         }
-        if ('q' == recvBuf[0])
-        {
-            sendto(sockSrv, "q", strlen("q") + 1, 0, (SOCKADDR*)&addrClient, len);
-            printf("Chat end!\n");
-            break;
-        }
-        sprintf_s(tempBuf, "[%s]Client say : %s", inet_ntoa(addrClient.sin_addr), recvBuf);
-        printf("%s\n", tempBuf);
-
-        //发送数据
-        //printf("Please input data: \n");
-        //gets_s(sendBuf);
-        memcpy(sendBuf, "Success Received.", 18);
-        sendto(sockSrv, sendBuf, strlen(sendBuf) + 1, 0, (SOCKADDR*)&addrClient, len);
     }
-    closesocket(sockSrv);
-    WSACleanup();
 }
