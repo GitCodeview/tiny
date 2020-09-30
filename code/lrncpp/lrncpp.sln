@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "serverApp", "serverApp\serv
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "runExeApp", "runExeApp\runExeApp.vcxproj", "{689E2E2D-CAC6-44CB-94A6-CDB736B18625}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "windowsApp", "windowsApp\windowsApp.vcxproj", "{BEBA9466-0C60-409E-A834-6AB54CD811B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{689E2E2D-CAC6-44CB-94A6-CDB736B18625}.Release|x64.Build.0 = Release|x64
 		{689E2E2D-CAC6-44CB-94A6-CDB736B18625}.Release|x86.ActiveCfg = Release|Win32
 		{689E2E2D-CAC6-44CB-94A6-CDB736B18625}.Release|x86.Build.0 = Release|Win32
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Debug|x64.ActiveCfg = Debug|x64
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Debug|x64.Build.0 = Debug|x64
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Debug|x86.Build.0 = Debug|Win32
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Release|x64.ActiveCfg = Release|x64
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Release|x64.Build.0 = Release|x64
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Release|x86.ActiveCfg = Release|Win32
+		{BEBA9466-0C60-409E-A834-6AB54CD811B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

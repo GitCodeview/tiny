@@ -24,7 +24,7 @@ void RegeditTest::TestMain()
     }
 
 
-    std::wstring wstrVersion(L"1.0.3.5");
+    std::wstring wstrVersion(L"1.0.3.8");
     LPCWSTR name = L"DisplayVersion";
     LPBYTE lpValue = reinterpret_cast<LPBYTE>(
                         const_cast<wchar_t*>(wstrVersion.c_str()));

@@ -5,6 +5,7 @@
 
 #include "udp_client.h"
 #include "regedit_test.h"
+#include "logging.h"
 
 int main()
 {
@@ -13,6 +14,9 @@ int main()
     //UDPClient local_client = UDPClient();
     //if(local_client.InitClient())
     //    local_client.Run();
+
+    Logging thisLog = Logging();
+    thisLog.InitLogging();
 
     RegeditTest::TestMain();
 }

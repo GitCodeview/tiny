@@ -45,20 +45,22 @@ int main()
     //    (LPCWSTR)("E:\\github\\tiny\\code\\lrncpp\\Debug\\test_00"),0);
     //std::cout << bcpy << std::endl;
 
-    std::string msg;
+    //std::string msg;
 
-    while (true)
-    {
-        std::cout << "Please enter the message:\n";
-        std::cin >> msg;
-        std::cout << "The Message is: " << msg << std::endl;
-        if (msg == ":re")
-        {
-            std::cout << "restarting... "<< std::endl;
-            restartExe::restart();
-            break;
-        }
-    }
+    //while (true)
+    //{
+    //    std::cout << "Please enter the message:\n";
+    //    std::cin >> msg;
+    //    std::cout << "The Message is: " << msg << std::endl;
+    //    if (msg == ":re")
+    //    {
+    //        std::cout << "restarting... "<< std::endl;
+    //        restartExe::restart();
+    //        break;
+    //    }
+    //}
+
+
     
 }
 
