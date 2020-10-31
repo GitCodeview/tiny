@@ -6,7 +6,7 @@
 #include <Winsock2.h>
 #include <string>
 
-#define MAX_BUFF_SIZE 1024
+#include "constant.h"
 
 class UDPServer
 {

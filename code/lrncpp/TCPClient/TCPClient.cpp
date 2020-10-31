@@ -1,24 +1,20 @@
-// consoleApp.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// TCPClient.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 
-#include "udp_client.h"
-#include "regedit_test.h"
-#include "logging.h"
+#include "tcp_client.h"
 
-int main()
+int main(int argc, char** argv)
 {
     std::cout << "Hello World!\n";
-
-    UDPClient local_client = UDPClient();
-    if(local_client.InitClient())
-        local_client.Run();
-
-    //Logging thisLog = Logging();
-    //thisLog.InitLogging();
-
-    //RegeditTest::TestMain();
+    int cnt = 0;
+    while (true) {
+        TCPClientMain(argc, argv);
+        Sleep(100);
+        std::cout << cnt++ << "\n";
+    }
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

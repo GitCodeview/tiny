@@ -15,36 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="serverApp.cpp">
+    <ClCompile Include="TCPClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="udp_server.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="udp_test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tcp_test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tcp_server.cpp">
+    <ClCompile Include="tcp_client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="udp_server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="udp_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tcp_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tcp_server.h">
+    <ClInclude Include="tcp_client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

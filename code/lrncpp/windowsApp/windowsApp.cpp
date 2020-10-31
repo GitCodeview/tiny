@@ -1,6 +1,9 @@
 // windowsApp.cpp : Defines the entry point for the application.
 //
 
+#include <iostream>
+#include <fstream>
+
 #include "framework.h"
 #include "windowsApp.h"
 
@@ -41,10 +44,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINDOWSAPP));
 
     MSG msg;
+    std::ofstream logfile("msg.log", std::ofstream::out);
 
     // Main message loop:
     while (GetMessage(&msg, nullptr, 0, 0))
     {
+        logfile << "message ID: " << std::hex << msg.message << std::endl;
         if (msg.message == WM_QUIT) {
             break;
         }
@@ -54,6 +59,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
             DispatchMessage(&msg);
         }
     }
+    logfile << "message ID: " << std::hex << msg.message << std::endl;
+    logfile.close();
     if (msg.message == WM_QUIT) {
         return (int)msg.wParam;
     }
