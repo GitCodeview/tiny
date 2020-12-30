@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Threading;
 
 namespace consoleApp
@@ -114,8 +115,38 @@ namespace consoleApp
             //        Console.WriteLine($"{test_port} NOT in using.");
             //}
 
-            Console.WriteLine("Environment.SpecialFolder.LocalApplicationData: {0}",
-                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+            //Console.WriteLine("Environment.SpecialFolder.LocalApplicationData: {0}",
+            //     Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+
+            //int count = 0;
+            //String strBIDS = GUIDTest.GetEncryptedBID();
+            //while (count < 1000)
+            //{
+            //    strBIDS += ("\n" + GUIDTest.GetEncryptedBID());
+            //    count++;
+            //}
+
+            //FileTest.Write("BIDS.txt", strBIDS);
+
+            //string quitString = "";
+            //RandomTest randomInstance = new RandomTest();
+            //while (quitString != ":q")
+            //{
+            //    randomInstance.DisplayRandomIndexs();
+            //    Console.Write("Press any key to continue(Enter :q to quit).\n");
+            //    quitString = Console.ReadLine();
+            //    //Console.WriteLine("You entered: {0}\n", quitString);
+            //}
+
+            string quitString = "";
+            while (quitString != ":q")
+            {
+                ServerTest.ChooseBestServer();
+                Console.Write("Press any key to continue(Enter :q to quit).\n");
+                quitString = Console.ReadLine();
+                //Console.WriteLine("You entered: {0}\n", quitString);
+            }
+            
 
         }
     }

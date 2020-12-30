@@ -21,5 +21,9 @@ namespace consoleApp
         {
             return File.ReadAllBytes(path);
         }
+        public static void AppendWrite(string path, string text)
+        {
+            File.AppendAllText(path, text);
+        }
     }
 }

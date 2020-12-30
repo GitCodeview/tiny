@@ -1,99 +1,125 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace consoleApp
 {
     class ServerList
     {
-        public static List<Server> servers;
+        public static List<Server> serverList = null;
 
         public static void LoadServers()
         {
-            string serversJson = @"[{
-                                'server': '94.176.237.206',
-                                'server_port': 21647,
-                                'password': 'iosDevPwd123',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 2
-                            },
-                            {
-                                'server': '47.74.226.204',
-                                'server_port': 8383,
-                                'password': 'xx123456',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '新加坡',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 1
-                            },
-                            {
-                                'server': '47.245.55.21',
-                                'server_port': 8383,
-                                'password': 'xx123456',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '日本',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 2
-                            },
-                            {
-                                'server': '47.56.125.154',
-                                'server_port': 8383,
-                                'password': 'xx123456',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '香港',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 3
-                            },
-                            {
-                                'server': '47.74.84.133',
-                                'server_port': 8383,
-                                'password': 'xx123456',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '澳大利亚',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 3
-                            },
-                            {
-                                'server': '47.254.27.235',
-                                'server_port': 8383,
-                                'password': 'xx123456',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '美国硅谷',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 4
-                            },
-                            {
-                                'server': '8.208.76.156',
-                                'server_port': 8383,
-                                'password': 'xx123456',
-                                'method': 'rc4-md5',
-                                'plugin': '',
-                                'plugin_opts': '',
-                                'plugin_args': '',
-                                'remarks': '英国伦敦',
-                                'timeout': 5,
-                                'timeoutProxyCnt': 6
-                            }]";
+            string serverListJson = @"[{
+                                        'server': 'fpn-hk.vpc.kr',
+                                        'server_port': 23616,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-ctr',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'official',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 1
+                                    },
+                                    {
+                                        'server': '161.117.82.252',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-ctr',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'release',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 3
+                                    },
+                                    {
+                                        'server': '47.242.13.83',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-gcm',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'release',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 3
+                                    },
+                                    {
+                                        'server': '161.117.178.158',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-gcm',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'release',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 6
+                                    },
+                                    {
+                                        'server': '161.117.82.109',
+                                        'server_port': 8383,
+                                        'password': 'sa123456',
+                                        'method': 'aes-256-gcm',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'release',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 4
+                                    },
+                                    {
+                                        'server': '47.242.9.23',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-gcm',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'release',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 4
+                                    },
+                                    {
+                                        'server': '154.204.30.133',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-ctr',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'official',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 0
+                                    },
+                                    {
+                                        'server': '154.204.30.131',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-ctr',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'official',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 9
+                                    },
+                                    {
+                                        'server': '121.12.172.56',
+                                        'server_port': 8383,
+                                        'password': 'sg123456',
+                                        'method': 'aes-256-ctr',
+                                        'plugin': '',
+                                        'plugin_opts': '',
+                                        'plugin_args': '',
+                                        'remarks': 'official',
+                                        'timeout': 5,
+                                        'timeoutProxyCnt': 1
+                                    }]";
+            serverList = JsonConvert.DeserializeObject<List<Server>>(serverListJson);
         }
     }
 }
