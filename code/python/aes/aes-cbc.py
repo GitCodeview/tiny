@@ -70,7 +70,7 @@ def aes_cbc_decrypt():
         print("---------------------------------------------------------------- \n")
  
 if __name__ == '__main__':
-    # init()
+    init()
     text_data = getTextData("text.dat")
     # key_set = bytes("578B11BBE7A760548FF64225BC7D3A85", encoding = "utf-8")
     # iv_set = bytes("109E711228DD3B14", encoding = "utf-8")

@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
     # print(json.dumps(printText_dict, indent = 2))
     with open("cfg.json", "w") as cfg:
-        cfg.write(json.dump(printText_dict, cfg, indent = 2))
+        json.dump(printText_dict, cfg, indent = 2)
         cfg.close()
 
     os.system("pause")
