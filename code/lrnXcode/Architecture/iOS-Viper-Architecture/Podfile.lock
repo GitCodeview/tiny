@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - ObjectMapper (3.4.2)
+  - PKHUD (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7.3)
+  - AlamofireImage (~> 3.3)
+  - AlamofireObjectMapper (~> 5.2)
+  - PKHUD (~> 5.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireObjectMapper
+    - ObjectMapper
+    - PKHUD
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+
+PODFILE CHECKSUM: d8ca416b2b4ba87ae02b7128a92bd41c83961bfa
+
+COCOAPODS: 1.5.3
