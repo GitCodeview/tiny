@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+platform :macos, '10.12'
+
+target 'cocoa_app_lrn' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for cocoa_app_lrn
+  pod 'CryptoSwift', '~> 0.12.0'
+  pod 'Alamofire', '~> 4.7.2'
+
+
+  target 'cocoa_app_lrnTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'cocoa_app_lrnUITests' do
+    # Pods for testing
+  end
+
+end
